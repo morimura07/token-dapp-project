@@ -11,7 +11,7 @@ const App = () => {
   const [error, setError] = useState('');
 
   const rpc = new StellarSdk.SorobanRpc.Server('https://soroban-testnet.stellar.org');
-  const contractId = 'CBT34OXXFXV5UBBZ3XCY6PEYQ5NWZOJLDSG3UGCULICW5QPEAU33UW4Y';
+  const contractId = 'CAHFDAU4DYTDWO77ALTWLPI6HAEPQVY5N7HW3CJFYPF4I2A533PTXFEW';
   const contract = new StellarSdk.Contract(contractId);
 
   const handleSend = async (e) => {
@@ -63,12 +63,12 @@ const App = () => {
       console.log('No public key to fetch balance');
       return;
     }
-    console.log('publicKey', publicKey);
+    //console.log('publicKey', publicKey);
     try {
       const inputAddressID = StellarSdk.nativeToScVal(publicKey, { type: "address" });
-      console.log('inputAddressID',inputAddressID);
+      //console.log('inputAddressID',inputAddressID);
       const account = await rpc.getAccount(publicKey);
-      console.log('account', account)
+      //console.log('account', account)
       const tx = new StellarSdk.TransactionBuilder(account, {
           fee: StellarSdk.BASE_FEE,
           networkPassphrase: StellarSdk.Networks.TESTNET,
@@ -76,10 +76,10 @@ const App = () => {
         .addOperation(contract.call("balance", inputAddressID))
         .setTimeout(30)
         .build();
-      console.log('tx', tx);
+      //console.log('tx', tx);
       rpc.simulateTransaction(tx).then((sim) => {
         const decoded = StellarSdk.scValToNative(sim.result?.retval);
-        console.log('decoded', decoded);
+        //console.log('decoded', decoded);
         setBalance(decoded.toString());
       });
     } catch (err) {
