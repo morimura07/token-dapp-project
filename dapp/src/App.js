@@ -14,7 +14,7 @@ const App = () => {
   const contractId = 'CBT34OXXFXV5UBBZ3XCY6PEYQ5NWZOJLDSG3UGCULICW5QPEAU33UW4Y';
   const contract = new StellarSdk.Contract(contractId);
 
-  const handleSet = async (e) => {
+  const handleSend = async (e) => {
     e.preventDefault();
     try {
       const inputFrom = StellarSdk.nativeToScVal(publicKey, { type: "address" });
@@ -110,7 +110,7 @@ const App = () => {
 
       <div className="section">
         <h2 className="section-title">Send Tokens</h2>
-        <form onSubmit={handleSet} className="form">
+        <form onSubmit={handleSend} className="form">
           <input
             type="text"
             value={to}
