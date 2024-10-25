@@ -1,4 +1,3 @@
-
 # Soroban Token Deployment + React dApp
 
 This repository contains a tutorial for deploying a fungible token on the Stellar network using Soroban smart contracts, followed by building a React decentralized application (dApp) to interact with the token. This project aims to provide a basic understanding of using Stellar's Soroban for token creation and integrating it with a frontend interface.
@@ -113,6 +112,5 @@ stellar keys address soheil
 stellar contract invoke --id CCOCB24RH7R2TKF4QVS4J6GBLZ5IZK4FXWQWMQ6GYRGHNUFPW53VJOFU --source-account james --network testnet -- transfer --from GAEY2VVMJKBIG4A2ZEMPF7JFSIEXP256VB2OR4JVNMYITNITTMD4W6PB --to GCVGVU2I35R2XWEWVNOG3DAATB4RGVMQOYDHQQI2V4A7YTTLUSSC3HWM --amount 10000000
 
 stellar contract invoke --id CCOCB24RH7R2TKF4QVS4J6GBLZ5IZK4FXWQWMQ6GYRGHNUFPW53VJOFU --source-account james --network testnet -- balance --id GB6XGMHAXJA4OCCY3U6RNYHET3PJDQG5EVEWX4GYH34QW3GE3O7PICGN
-
 
 stellar contract invoke --id CCOCB24RH7R2TKF4QVS4J6GBLZ5IZK4FXWQWMQ6GYRGHNUFPW53VJOFU --source-account james --network testnet -- transfer --from GAEY2VVMJKBIG4A2ZEMPF7JFSIEXP256VB2OR4JVNMYITNITTMD4W6PB --to GB6XGMHAXJA4OCCY3U6RNYHET3PJDQG5EVEWX4GYH34QW3GE3O7PICGN --amount 10000000
