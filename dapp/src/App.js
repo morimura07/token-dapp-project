@@ -11,7 +11,7 @@ const App = () => {
   const [error, setError] = useState('');
 
   const rpc = new StellarSdk.SorobanRpc.Server('https://soroban-testnet.stellar.org');
-  const contractId = 'CAHFDAU4DYTDWO77ALTWLPI6HAEPQVY5N7HW3CJFYPF4I2A533PTXFEW';
+  const contractId = 'CCOCB24RH7R2TKF4QVS4J6GBLZ5IZK4FXWQWMQ6GYRGHNUFPW53VJOFU';
   const contract = new StellarSdk.Contract(contractId);
 
   const handleSend = async (e) => {
