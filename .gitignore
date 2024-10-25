@@ -1,0 +1,37 @@
+# Ignore Cargo's output
+/target/
+
+# IDE files
+tags
+*.rs.bk
+
+# Ignored by default in Rust projects
+**/*.rs.bk
+*.d
+*.o
+*.rlib
+*.lo
+*.hi
+*.pyc
+
+# Node modules (if used for any frontend or web components)
+/node_modules/
+
+# Soroban-specific ignore patterns
+.soroban/
+
+# Ignore compiled WASM binaries
+*.wasm
+
+# VS Code settings
+.vscode/
+
+# MacOS files
+.DS_Store
+
+# Backup files
+*.bak
+*.tmp
+
+# Logs
+*.log
