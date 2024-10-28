@@ -30,10 +30,10 @@ const App = () => {
         .setTimeout(30)
         .build();
       console.log('tx.toXDR()',tx.toXDR());
-      //const preparedTx = await rpc.prepareTransaction(tx);
-      const signedTX = await freighterApi.signTransaction(tx.toXDR(), network);
+      const preTx = await rpc.prepareTransaction(tx);
+      const signedTX = await freighterApi.signTransaction(preTx.toXDR(), network);
       console.log('signedTransaction', signedTX);
-      const preparedTx = StellarSdk.TransactionBuilder.fromXDR(signedTX, StellarSdk.Networks.TESTNET);
+      const preparedTx = StellarSdk.TransactionBuilder.fromXDR(signedTX.signedTxXdr, StellarSdk.Networks.TESTNET);
       console.log('preparedTx',preparedTx);
       const txResult = await rpc.sendTransaction(preparedTx);
       console.log('txResult', txResult);
